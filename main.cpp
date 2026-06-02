@@ -2,7 +2,7 @@
 #include <cstdlib>
 
 int main() {
-    const dpp::snowflake MRS_ID = 1298304487605403658;
+    
 
     // トークンの取得
     const char* token = std::getenv("DISCORD_TOKEN");
@@ -32,6 +32,7 @@ int main() {
             
         }
         //ギルドコマンドの登録
+        const dpp::snowflake MRS_ID = 1298304487605403658;
         bot.guild_command_create(
             dpp::slashcommand("sendmsg", "メッセージを送信", bot.me.id)
                 .add_option(dpp::command_option(
