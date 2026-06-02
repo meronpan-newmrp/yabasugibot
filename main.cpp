@@ -53,7 +53,10 @@ int main() {
                 dpp::message(channel_id, message)
             );
 
-            event.reply("メッセージを送信完了！", true);
+            event.reply(
+                dpp::message("メッセージを送信完了！")
+                .set_flags(dpp::m_ephemeral)
+            );
         }
     });
     // メッセージ受信イベント
