@@ -31,13 +31,13 @@ int main() {
             );
         }
     });
-
+    //ギルドコマンドの登録
     bot.guild_command_create(
-        dpp::slashcommand("sendmsg", "メッセージを送信", bot.me.id),
-        .add_option(
+        dpp::slashcommand cmd("sendmsg", "メッセージを送信", bot.me.id),
+        cmd.add_option(
             dpp::command_option(dpp::co_channel, "channel", "送信するチャンネル", true)
         )
-        .add_option(
+        cmd.add_option(
             dpp::command_option(dpp::co_string, "message", "送信するメッセージ", true)
         ),
         MRS_ID
