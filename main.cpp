@@ -63,8 +63,7 @@ int main() {
 
         if (event.command.get_command_name() == "sendmsg") {
 
-            auto channel_id = std::stoull(std::get<std::string>(event.get_parameter("channelgit add main.cpp
-)));
+            auto channel_id = std::stoull(std::get<std::string>(event.get_parameter("channel")));
 
             auto message = std::get<std::string>(
                 event.get_parameter("message")
