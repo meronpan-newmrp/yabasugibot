@@ -48,7 +48,7 @@ int main() {
                     true
                 )),
             MRS_ID
-    });
+        );
 
     //コマンド
     bot.on_slashcommand([&bot](const dpp::slashcommand_t& event) {
