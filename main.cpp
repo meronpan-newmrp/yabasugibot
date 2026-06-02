@@ -42,7 +42,7 @@ int main() {
                     bot.me.id
                 )
                 .add_option(dpp::command_option(
-                    dpp::co_channel,
+                    dpp::co_string,
                     "channel",
                     "送信するチャンネル",
                     true
@@ -63,9 +63,9 @@ int main() {
 
         if (event.command.get_command_name() == "sendmsg") {
 
-            auto channel_id = std::get<dpp::snowflake>(
+            auto channel_id = std::stoull(std::get<std::string>(
                 event.get_parameter("channel")
-            );
+            )));
 
             auto message = std::get<std::string>(
                 event.get_parameter("message")
