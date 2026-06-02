@@ -9,7 +9,10 @@ int main() {
         return 1;
     }
 
-    dpp::cluster bot(token);
+    dpp::cluster bot(
+    token,
+    dpp::i_default_intents | dpp::i_message_content
+);
 
     // ログ表示
     bot.on_log(dpp::utility::cout_logger());
