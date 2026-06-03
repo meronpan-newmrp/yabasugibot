@@ -55,6 +55,8 @@ int main() {
                 )),
                 MRS_ID
             );
+            bot.global_command_create(
+            );
         }
     });
 
